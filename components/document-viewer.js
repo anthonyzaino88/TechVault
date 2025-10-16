@@ -24,7 +24,7 @@ render() {
 
       .download-btn {
         padding: 5px 10px;
-        background-color: #053658 ;
+        background-color: #2563eb;
         color: white;
         border: none;
         border-radius: 5px;
@@ -85,7 +85,7 @@ render() {
       
       
       .close {
-        color: #053658; /* Dark blue color */
+        color: #2563eb; /* Dark blue color */
         float: right;
         font-size: 28px;
         font-weight: bold;
@@ -107,9 +107,9 @@ render() {
         background-color: transparent!important;
         border: none!important;
         cursor: pointer;
-        color: #053658!important;
+        color: #2563eb!important;
         font-size:1rem;
-        text-decoration: underline #053658!important;
+        text-decoration: underline #2563eb!important;
 
 
       }
@@ -120,7 +120,7 @@ render() {
       
       #page-num {
         font-size: 20px;
-        color: #053658!important;
+        color: #2563eb!important;
       }
       
 
@@ -140,7 +140,7 @@ render() {
 
         a {
           text-decoration: none!important;
-          color: #053658!important;
+          color: #2563eb!important;
         }
        
 
@@ -153,7 +153,7 @@ render() {
           border-radius: 20px;
           width: 170px;
           font-size: 22px;
-          color: #274472!important;
+          color: #1e40af!important;
           box-shadow:rgba(0, 0, 0, 0.15) 0px 2px 8px;
           transition: width 0.3s ease; /* Smooth transition for category buttons */
         }
@@ -187,7 +187,7 @@ render() {
         }
 
         .category.active {
-          background-color: #053658!important;
+          background-color: #2563eb!important;
           color: whitesmoke!important;
         }
 

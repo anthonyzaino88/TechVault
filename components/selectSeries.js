@@ -203,11 +203,12 @@ class SeriesSelector extends HTMLElement {
             noModelsMessage.appendChild(afterText);
             noModelsWrapper.appendChild(noModelsMessage);
         
-            // Optionally, add a CTA link to the product configurator
+            // Add a CTA link to developer portfolio
             const configuratorLink = document.createElement('a');
             configuratorLink.className = 'no-message-cta';
-            configuratorLink.href = 'https://www.optisizer.com/Default.aspx';
-            configuratorLink.textContent = 'Visit our Configurator';
+            configuratorLink.href = 'https://anthony-zaino-portfolio.vercel.app/';
+            configuratorLink.textContent = 'View Developer Portfolio';
+            configuratorLink.target = '_blank';
             configuratorLink.style.display = 'block'; // Display link on a new line
             noModelsWrapper.appendChild(configuratorLink);
         
@@ -258,7 +259,7 @@ class SeriesSelector extends HTMLElement {
                 <p style="font-size: 20px; font-weight: 700; margin-bottom: .25rem;">${model.name}</p>
                 <p style="margin-top: .25rem; font-size: 18px;">${model.price}</p>
             </div>
-            <a href="https://www.optisizer.com/Default.aspx" target="_blank" ><span>Order Now</span></a>
+            <a href="https://anthony-zaino-portfolio.vercel.app/" target="_blank" ><span>👨‍💻 Portfolio</span></a>
         `;
         return modelItem;
     }

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb"/>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial, sans-serif'>T</text></svg>">
+    <title>TechVault | About</title>
+    <link rel="stylesheet" href="../globleStyles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e3e8ef 100%);
+        }
+        
+        /* Modern fixed header */
+        .page-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 100px auto 100px auto;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #1e40af;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-section h1 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        .section p {
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+            border-color: #2563eb;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #f59e0b;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                padding: 40px 24px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-title">
+                ℹ️ About
+            </div>
+            <div class="header-brand">
+                TechVault
+            </div>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">🏠 Home</a>
+            <span>/</span>
+            <span>About</span>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🚀 TechVault PWA</h1>
+            <p>A modern Progressive Web App showcasing advanced e-commerce features, built with vanilla JavaScript and cutting-edge web technologies.</p>
+            <div class="badge">📱 Portfolio Project</div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2>💡 About This Project</h2>
+            <p>TechVault is a <strong>portfolio demonstration project</strong> built to showcase modern web development skills, PWA capabilities, and e-commerce design patterns. This application demonstrates:</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Product Catalog</h3>
+                    <p>Advanced filtering, sorting, and search across 60+ products with real-time updates and Quick View modals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Document Library</h3>
+                    <p>Organized documentation system with category filtering and color-coded document types.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Interactive charts and data visualization demonstrating front-end data handling capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Favorites System</h3>
+                    <p>Local storage implementation for saving favorite products with persistent state management.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>PWA Features</h3>
+                    <p>Offline functionality, installability, service worker caching, and responsive design.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern UI/UX</h3>
+                    <p>Clean, professional design with smooth animations, gradients, and micro-interactions.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="section">
+            <h2>⚡ Technology Stack</h2>
+            <p>Built with modern web technologies and best practices:</p>
+            
+            <h3>Frontend</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Vanilla JavaScript (ES6+)</span>
+                <span class="tech-badge">Web Components</span>
+                <span class="tech-badge">Shadow DOM</span>
+                <span class="tech-badge">Custom Elements</span>
+                <span class="tech-badge">CSS3 & Animations</span>
+                <span class="tech-badge">Responsive Design</span>
+            </div>
+
+            <h3>PWA Features</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Service Workers</span>
+                <span class="tech-badge">Cache API</span>
+                <span class="tech-badge">Web App Manifest</span>
+                <span class="tech-badge">Offline Support</span>
+                <span class="tech-badge">Installable</span>
+            </div>
+
+            <h3>Architecture</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Component-Based</span>
+                <span class="tech-badge">State Management</span>
+                <span class="tech-badge">Event-Driven</span>
+                <span class="tech-badge">JSON Data Store</span>
+                <span class="tech-badge">Client-Side Routing</span>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="section">
+            <h2>📈 Project Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">60+</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Documents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Main Pages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Responsive</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <ul style="color: #64748b; line-height: 2; font-size: 1.05rem;">
+                <li><strong>Advanced Filtering & Search:</strong> Multi-criteria filtering with real-time search</li>
+                <li><strong>Quick View Modals:</strong> Instant product previews without page navigation</li>
+                <li><strong>Responsive Design:</strong> Mobile-first approach, works on all devices</li>
+                <li><strong>Offline Functionality:</strong> Service Worker caching for offline access</li>
+                <li><strong>Modern UI:</strong> Gradients, shadows, animations, and micro-interactions</li>
+                <li><strong>Performance Optimized:</strong> Fast loading, smooth animations, efficient rendering</li>
+                <li><strong>Accessibility:</strong> Semantic HTML, keyboard navigation, ARIA labels</li>
+                <li><strong>Data Visualization:</strong> Charts and analytics for data presentation</li>
+            </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>👨‍💻 Want to See More?</h2>
+            <p>Check out my portfolio for more projects and get in touch!</p>
+            <div class="cta-buttons">
+                <a href="https://anthony-zaino-portfolio.vercel.app/" target="_blank" class="btn btn-primary">
+                    View Portfolio
+                </a>
+                <a href="https://github.com" target="_blank" class="btn btn-secondary">
+                    GitHub Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <bottom-navbar></bottom-navbar>
+    
+    <!-- Scripts -->
+    <script src="../components/navbar.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
+

@@ -1,5 +1,5 @@
 // Define the cache name and resources to cache
-const cacheName = 'Soler-Palau-App-Data-V3';
+const cacheName = 'TechVault-Catalog-PWA-V4';
 const cacheResources = [
   '/sp-app/',
   '/sp-app/index.html',
@@ -9,8 +9,6 @@ const cacheResources = [
   '/sp-app/assets/icons/icon-v3.png',
   '/sp-app/assets/icons/icon-v4.png',
   '/sp-app/assets/icons/icon-v6.png',
-  '/sp-app/assets/images/fan-solid.svg',
-  '/sp-app/assets/images/fan-white.svg',
   '/sp-app/assets/images/file-pdf-solid.svg',
   '/sp-app/assets/images/home.svg',
   '/sp-app/assets/images/library.svg',
@@ -24,10 +22,14 @@ const cacheResources = [
   '/sp-app/assets/images/solidplay-white.svg',
   '/sp-app/assets/css/styles.css',
   '/sp-app/assets/css/cross-ref-style.css',
+  '/sp-app/globleStyles.css',
   '/sp-app/js/main.js',
-  '/sp-app/pages/cross-ref.html',
   '/sp-app/pages/library.html',
   '/sp-app/pages/products.html',
+  '/sp-app/pages/productsgrid.html',
+  '/sp-app/pages/about.html',
+  '/sp-app/pages/analytics.html',
+  '/sp-app/pages/favorites.html',
   '/sp-app/data/competitors.json',
   '/sp-app/data/cross-references.json',
   '/sp-app/data/documents.json',
@@ -35,7 +37,9 @@ const cacheResources = [
   '/sp-app/components/cross-reference-table.js',
   '/sp-app/components/document-viewer.js',
   '/sp-app/components/navbar.js',
-  '/sp-app/components/product-list.js'
+  '/sp-app/components/product-list.js',
+  '/sp-app/components/modern-product-catalog.js',
+  '/sp-app/components/modern-document-library.js'
 
 
 ];

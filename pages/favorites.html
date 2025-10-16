@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb"/>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial, sans-serif'>T</text></svg>">
+    <title>TechVault | Favorites</title>
+    <link rel="stylesheet" href="../globleStyles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e3e8ef 100%);
+        }
+        
+        /* Modern fixed header */
+        .page-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .favorites-container {
+            max-width: 1400px;
+            margin: 100px auto 100px auto;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .page-header-section {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .page-header-section h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+
+        .favorites-count {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .empty-state {
+            background: white;
+            border-radius: 16px;
+            padding: 80px 40px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .empty-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            opacity: 0.5;
+        }
+
+        .empty-state h2 {
+            font-size: 1.75rem;
+            color: #1e293b;
+            margin-bottom: 16px;
+        }
+
+        .empty-state p {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
+        }
+
+        .favorites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .favorite-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .favorite-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+            border-color: #2563eb;
+        }
+
+        .favorite-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .favorite-image img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            background: rgba(220, 38, 38, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .remove-btn:hover {
+            transform: scale(1.1);
+            background: rgba(220, 38, 38, 1);
+        }
+
+        .favorite-info {
+            padding: 20px;
+        }
+
+        .favorite-category {
+            font-size: 12px;
+            color: #2563eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .favorite-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 8px;
+        }
+
+        .favorite-series {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .favorite-price {
+            font-size: 22px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .favorite-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .action-btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .action-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+        }
+
+        .action-btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        .action-btn-secondary:hover {
+            background: #e2e8f0;
+        }
+
+        .clear-all-btn {
+            padding: 12px 24px;
+            background: #fee2e2;
+            color: #dc2626;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .clear-all-btn:hover {
+            background: #fecaca;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .favorites-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Fixed Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-title">
+                ❤️ Favorites
+            </div>
+            <div class="header-brand">
+                TechVault
+            </div>
+        </div>
+    </header>
+
+    <div class="favorites-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">🏠 Home</a>
+            <span>/</span>
+            <span>Favorites</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header-section">
+            <div>
+                <h1>❤️ My Favorites</h1>
+                <p style="color: #64748b; margin: 8px 0 0 0;">Products you've saved for later</p>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <span class="favorites-count" id="favoritesCount">0 items</span>
+                <button class="clear-all-btn" id="clearAllBtn" style="display: none;">
+                    🗑️ Clear All
+                </button>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState">
+            <div class="empty-icon">❤️</div>
+            <h2>No Favorites Yet</h2>
+            <p>Start building your wishlist by adding products from our catalog. Your favorites will appear here!</p>
+            <a href="./products.html" class="btn">Browse Products</a>
+        </div>
+
+        <!-- Favorites Grid -->
+        <div class="favorites-grid" id="favoritesGrid" style="display: none;">
+            <!-- Favorite cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <bottom-navbar></bottom-navbar>
+    
+    <!-- Scripts -->
+    <script src="../components/navbar.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        // Favorites Management
+        class FavoritesManager {
+            constructor() {
+                this.favorites = this.loadFavorites();
+                this.init();
+            }
+
+            loadFavorites() {
+                const saved = localStorage.getItem('techvault_favorites');
+                return saved ? JSON.parse(saved) : [];
+            }
+
+            saveFavorites() {
+                localStorage.setItem('techvault_favorites', JSON.stringify(this.favorites));
+            }
+
+            addFavorite(product) {
+                if (!this.isFavorite(product.id)) {
+                    this.favorites.push(product);
+                    this.saveFavorites();
+                    this.render();
+                }
+            }
+
+            removeFavorite(productId) {
+                this.favorites = this.favorites.filter(f => f.id !== productId);
+                this.saveFavorites();
+                this.render();
+            }
+
+            clearAll() {
+                if (confirm('Are you sure you want to remove all favorites?')) {
+                    this.favorites = [];
+                    this.saveFavorites();
+                    this.render();
+                }
+            }
+
+            isFavorite(productId) {
+                return this.favorites.some(f => f.id === productId);
+            }
+
+            init() {
+                this.render();
+                document.getElementById('clearAllBtn').addEventListener('click', () => this.clearAll());
+            }
+
+            render() {
+                const emptyState = document.getElementById('emptyState');
+                const favoritesGrid = document.getElementById('favoritesGrid');
+                const favoritesCount = document.getElementById('favoritesCount');
+                const clearAllBtn = document.getElementById('clearAllBtn');
+
+                // Update count
+                favoritesCount.textContent = `${this.favorites.length} ${this.favorites.length === 1 ? 'item' : 'items'}`;
+
+                // Show/hide clear button
+                clearAllBtn.style.display = this.favorites.length > 0 ? 'block' : 'none';
+
+                if (this.favorites.length === 0) {
+                    emptyState.style.display = 'block';
+                    favoritesGrid.style.display = 'none';
+                } else {
+                    emptyState.style.display = 'none';
+                    favoritesGrid.style.display = 'grid';
+                    
+                    favoritesGrid.innerHTML = this.favorites.map(product => `
+                        <div class="favorite-card">
+                            <button class="remove-btn" onclick="favManager.removeFavorite(${product.id})" title="Remove from favorites">
+                                ❌
+                            </button>
+                            <div class="favorite-image">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="favorite-info">
+                                <div class="favorite-category">${product.category}</div>
+                                <div class="favorite-name">${product.name}</div>
+                                <div class="favorite-series">${product.series}</div>
+                                <div class="favorite-price">${product.price}</div>
+                                <div class="favorite-actions">
+                                    <a href="https://anthony-zaino-portfolio.vercel.app/" target="_blank" class="action-btn action-btn-primary">
+                                        👨‍💻 Dev
+                                    </a>
+                                    <button class="action-btn action-btn-secondary" onclick="favManager.removeFavorite(${product.id})">
+                                        🗑️ Remove
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            }
+        }
+
+        // Initialize Favorites Manager
+        const favManager = new FavoritesManager();
+
+        // Make it globally accessible for demo purposes
+        window.favManager = favManager;
+
+        // Demo: Add some sample favorites if none exist (for demonstration)
+        if (favManager.favorites.length === 0) {
+            // Fetch products and add a few samples
+            fetch('../data/products.json')
+                .then(response => response.json())
+                .then(categories => {
+                    // Add sample favorites from different categories
+                    const sampleProducts = [
+                        { id: 1, name: 'Pro X7 Elite', price: '$2,899', category: 'Laptops & Computers', series: 'Pro Series', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400' },
+                        { id: 2, name: 'Flagship Plus', price: '$1,299', category: 'Mobile Devices', series: 'Flagship Series', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400' },
+                        { id: 3, name: 'Studio Headphones Pro', price: '$399', category: 'Audio Equipment', series: 'Studio Series', image: 'https://images.unsplash.com/photo-1545127398-14699f92334b?w=400' }
+                    ];
+
+                    // Auto-add demo favorites
+                    sampleProducts.forEach(product => favManager.addFavorite(product));
+                })
+                .catch(err => console.log('Could not load sample products'));
+        }
+    </script>
+</body>
+</html>
+

@@ -1,11 +1,11 @@
 {
-    "name": "Soler Palau-USA App",
-    "short_name": "S&P App",
-    "description": "Resource hub for reps to access product information, submittals, specsheets, IOMs, and more.",
+    "name": "TechVault - Product Catalog PWA",
+    "short_name": "TechVault",
+    "description": "A modern Progressive Web App showcasing e-commerce features, analytics, and document management with offline support.",
     "start_url": "/sp-app",
     "display": "standalone",
-    "background_color": "whitesmoke",
-    "theme_color": "#053658",
+    "background_color": "#f5f5f5",
+    "theme_color": "#2563eb",
     "orientation": "any",
     "prefer_related_applications": false, 
     "icons": [

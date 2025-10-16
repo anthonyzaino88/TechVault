@@ -1,23 +1,30 @@
 /* Container Styles */
 .my-container {
-    padding-top: 6.25rem; /* Adjust as per the header height */
+    padding-top: 6.25rem;
     margin-left: 15px;
     margin-right: 15px;
+    padding-bottom: 100px;
 }
 
 html, body {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3e8ef 100%);
 }
 
 
 /* Table Styles */
 table {
-    font-family: Arial, sans-serif;
-    width: 100%; /* Make the table responsive to its container */
-    font-size: 14px; /* Increase font size for better readability */
-    border-collapse: collapse; /* Remove spacing between table cells */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
 }
 
 /* Set a specific width for table headers and cells */
@@ -35,42 +42,55 @@ table {
 
 tbody {
     background-color: white;
-    color: #000000c2;
-    padding-top: 50px; /* Adjust the height as per your sticky header's height */
-    overflow-y: scroll; 
+    color: #1f2937;
+    padding-top: 50px;
+    overflow-y: scroll;
+}
+
+tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+tbody tr:hover {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(102, 126, 234, 0.03) 100%);
+    transform: scale(1.01);
 }
 
 .header {
     position: sticky;
     top: 0;
     z-index: 10;
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
 }
 
 
 
 
 .header th {
-    font-size: 13px;
+    font-size: 14px;
     text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: whitesmoke;
-    color: var(--primary-blue);
-    font-weight: 500;
-    padding: 0.5rem;
-    position: relative; /* Add relative positioning to the header */
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 0.5rem;
+    position: relative;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
-/* Add a pseudo-element for the bottom border */
 .header th::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1px; /* Set the height of the border */
-    background-color: rgba(0, 0, 0, 0.2); /* Color of the border */
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Hide the 4th column */
@@ -83,21 +103,38 @@ tbody {
 .table-img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    transition: all 0.3s ease;
+}
+
+.table-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25);
 }
 
 /* Input Styles */
 input.left-input {
-    width: 90%; /* Wider input fields for touch-friendly usability */
-    letter-spacing: 1px;
-    padding: 0.75rem!important;
-    border-radius: 20px!important;
-    border: 1px solid #ccc!important;
-    background-color: whitesmoke!important;
+    width: 90%;
+    letter-spacing: 0.5px;
+    padding: 1rem!important;
+    border-radius: 16px!important;
+    border: 2px solid rgba(37, 99, 235, 0.2)!important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)!important;
     margin-top: 2rem;
     margin-bottom: 10px;
     font-size: 15px!important;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+    transition: all 0.3s ease!important;
+    color: #1e40af!important;
+    font-weight: 500!important;
+}
+
+input.left-input:focus {
+    outline: none!important;
+    border-color: #2563eb!important;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2), 0 0 0 3px rgba(37, 99, 235, 0.1)!important;
+    transform: translateY(-2px)!important;
 }
 
 /* Dropdown Styles */

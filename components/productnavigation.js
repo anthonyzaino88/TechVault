@@ -224,8 +224,9 @@ display: flex;
 
       const configuratorLink = document.createElement("a");
       configuratorLink.className = "no-message-cta";
-      configuratorLink.href = "https://www.optisizer.com/Default.aspx";
-      configuratorLink.textContent = "Visit our Configurator";
+      configuratorLink.href = "https://anthony-zaino-portfolio.vercel.app/";
+      configuratorLink.textContent = "View Developer Portfolio";
+      configuratorLink.target = "_blank";
 
       noModelsWrapper.appendChild(noModelsMessage);
       noModelsWrapper.appendChild(configuratorLink);
@@ -264,7 +265,7 @@ display: flex;
                         }</p>
                     </div>
                 </div>
-                <a href="https://www.optisizer.com/Default.aspx" target="_blank" class="buy-now-btn">BUY NOW</a>
+                <a href="https://anthony-zaino-portfolio.vercel.app/" target="_blank" class="buy-now-btn">👨‍💻 DEVELOPER</a>
             `;
 
       seriesView.appendChild(seriesDiv);

@@ -3,83 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#003b5c" />
+    <meta name="theme-color" content="#2563eb" />
     <meta name="robots" content="noindex, nofollow">
-    <title>Soler Palau USA | Competitive Cross Reference</title>
+    <title>TechVault | Product Cross Reference</title>
     <link rel="stylesheet" href="../assets/css/cross-ref-style.css">
-     <link rel="stylesheet" href="../globleStyles.css">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5T89QEGBKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="../globleStyles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e3e8ef 100%);
+        }
+        
+        /* Modern fixed header */
+        .page-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+            border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
 
-  gtag('config', 'G-5T89QEGBKP');
-</script>
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+
+        /* Modern Container */
+        .my-container {
+            max-width: 1400px;
+            margin: 100px auto 100px auto;
+            padding: 20px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: #1e40af;
+        }
+
+        .breadcrumb-separator {
+            color: #cbd5e1;
+        }
+
+        /* Page Info Header */
+        .page-info {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .page-info h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .page-info p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Search Component */
+        .search-component-container {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input-container, .input-dropdown-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-container label,
+        .input-dropdown-container label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .left-input {
+            padding: 14px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: #f8fafc;
+            font-weight: 500;
+        }
+
+        .left-input:focus {
+            outline: none;
+            border-color: #2563eb;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .input-dropdown-container select {
+            padding: 14px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 15px;
+            background: #f8fafc;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .input-dropdown-container select:focus {
+            outline: none;
+            border-color: #2563eb;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Table Wrapper */
+        .table-wrapper {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            overflow-x: auto;
+            margin-bottom: 24px;
+        }
+
+        /* Table Enhancements */
+        #myTable {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+
+        .header th {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 18px 16px;
+        }
+
+        #myTable tbody tr {
+            transition: all 0.3s;
+        }
+
+        #myTable tbody tr:hover {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+            transform: scale(1.01);
+        }
+
+        /* Disclaimer */
+        .container {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.15);
+        }
+
+        .disclaimer {
+            color: #92400e;
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .disclaimer b {
+            font-weight: 800;
+            color: #78350f;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem;
+            }
+
+            .header-title {
+                font-size: 1.1rem;
+                letter-spacing: 1.5px;
+            }
+
+            .header-brand {
+                font-size: 1.2rem;
+            }
+
+            .search-component-container {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .page-info h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
 <body>
-  <div 
-  style="
-  color: whitesmoke; 
-  background-color: var(--primary-blue); 
-  font-size: 25px; 
-  width: 100%; 
-  position: fixed; 
-  top: 0; 
-  display: flex; 
-  justify-content: space-between; 
-  opacity: 1; 
-  border-bottom: 4px var(--primary-red) solid;
-  z-index: 999;
-  ">
-      <div style="padding: 1rem;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          align-content: center;
-          display: flex;
-          flex-wrap: wrap;
-          font-weight: 500;
-      ">Cross Reference</div>
-      <img style="padding: 1rem; height: 75px;" src="../assets/images/whitelogo.png" alt="logo" srcset="">
-  </div>
-      <div class="my-container">
-      <div class="search-component-container">
-        <div class="input-container">
-        <input class="left-input" type="text" id="myInput" placeholder="Search Cross Reference.." title="Type in a name">
+    <!-- Fixed Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <div class="header-title">
+                🔄 Cross Reference
+            </div>
+            <div class="header-brand">
+                TechVault
+            </div>
         </div>
-    <div class="input-dropdown-container">
-        <form>
-          <label for="Select Competitor">Competitors:</label>      
-          <select id="inputroot"></select>
-        </form>
-      </div>
+    </header>
+
+    <div class="my-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">🏠 Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Cross Reference</span>
+        </div>
+
+        <!-- Page Info -->
+        <div class="page-info">
+            <h1>🔄 Product Cross Reference</h1>
+            <p>Compare TechVault products with competitor models. Find equivalent products across different brands to make informed purchasing decisions.</p>
+        </div>
+
+        <!-- Search Component -->
+        <div class="search-component-container">
+            <div class="input-container">
+                <label for="myInput">🔍 Search</label>
+                <input class="left-input" type="text" id="myInput" placeholder="Search by model, series, or brand..." title="Type in a name">
+            </div>
+            <div class="input-dropdown-container">
+                <label for="inputroot">🏢 Filter by Competitor</label>
+                <select id="inputroot">
+                    <option value="">All Competitors</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper">
+            <table id="myTable">
+                <thead>
+                    <tr class="header">
+                        <th>Competitor Series</th>
+                        <th>Competitor Name</th>
+                        <th>TechVault Series</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody id="root"></tbody>
+            </table>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="container">
+            <div class="disclaimer">
+                <b>📌 NOTE:</b> TechVault and competitor models may change without notice. This cross-reference is provided for general guidance only. Please verify specifications before making purchasing decisions.
+            </div>
+        </div>
     </div>
-    <div class="table-wrapper">
-          <table id="myTable">
-            <thead>
-            <tr class="header">
-              <th>Competitor<br> Series</th>
-              <th>Competitor<br> Name</th>
-              <th>S&P <br> Series</th>
-              <th>Description</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tr id="root"></tr>
-        </table>
-     </div>
-     <div class="container">
-      <div class="disclaimer"><b>NOTE:</b> S&amp;P or Competitor models may change without notice.</div>
-    </div>
-    </div>
-    
-    
+
+    <!-- Bottom Navigation -->
     <bottom-navbar></bottom-navbar>
+    
+    <!-- Scripts -->
     <script src="../components/navbar.js"></script>
     <script src="../components/cross-reference-table.js"></script>
-<script src="../js/main.js"></script> 
-    
-    
-      </body>
-      </html>
+    <script src="../js/main.js"></script>
+</body>
+</html>

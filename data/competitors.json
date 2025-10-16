@@ -1,138 +1,92 @@
 [
-    {
-      "CompetitorID": "Acme"
-    },
-  
-    {
-      "CompetitorID": "Airking"
-    },
-  
-    {
-      "CompetitorID": "American Aldes"
-    },
-  
-    {
-      "CompetitorID": "Aprilaire"
-    },
-  
-    {
-      "CompetitorID": "Big Ass Fan"
-    },
-  
-    {
-      "CompetitorID": "Broan"
-    },
-  
-    {
-      "CompetitorID": "Canarm"
-    },
-  
-    {
-      "CompetitorID": "Captive Aire"
-    },
-  
-    {
-      "CompetitorID": "Carnes"
-    },
-  
-    {
-      "CompetitorID": "Continental Fan"
-    },
-  
-    {
-      "CompetitorID": "Collair"
-    },
-  
-    {
-      "CompetitorID": "Delhi"
-    },
-  
-    {
-      "CompetitorID": "Delta"
-    },
-  
-  
-    {
-      "CompetitorID": "Fantech"
-    },
-  
-    {
-      "CompetitorID": "Grainger"
-    },
-  
-    {
-      "CompetitorID": "Greenheck"
-    },
-  
-    {
-      "CompetitorID": "Greentek"
-    },
-  
-    {
-      "CompetitorID": "Honeywell"
-    },
-  
-    {
-      "CompetitorID": "Hunter Industrial"
-    },
-  
-    {
-      "CompetitorID": "Lifebreath"
-    },
-  
-    {
-      "CompetitorID": "Loren Cook"
-    },
-  
-    {
-      "CompetitorID": "MacroAir"
-    },
-  
-    {
-      "CompetitorID": "Panasonic"
-    },
-  
-    {
-      "CompetitorID": "PennBarry"
-    },
-  
-    {
-      "CompetitorID": "Radonaway"
-    },
-  
-    {
-      "CompetitorID": "Reversomatic Manf."
-    },
-  
-    {
-      "CompetitorID": "Semco"
-    },
-  
-    {
-      "CompetitorID": "Spruce"
-    },
-  
-    {
-      "CompetitorID": "Summeraire"
-    },
-  
-    {
-      "CompetitorID": "Systemair"
-    },
-  
-    {
-      "CompetitorID": "Tjernlund"
-    },
-  
-    {
-      "CompetitorID": "Twin City"
-    },
-  
-    {
-      "CompetitorID": "Venmar"
-    },
-  
-    {
-      "CompetitorID": "Zoo Fans"
-    }
- ]
+  {
+    "CompetitorID": "Apple"
+  },
+  {
+    "CompetitorID": "Samsung"
+  },
+  {
+    "CompetitorID": "Dell"
+  },
+  {
+    "CompetitorID": "HP"
+  },
+  {
+    "CompetitorID": "Lenovo"
+  },
+  {
+    "CompetitorID": "ASUS"
+  },
+  {
+    "CompetitorID": "Acer"
+  },
+  {
+    "CompetitorID": "MSI"
+  },
+  {
+    "CompetitorID": "Google"
+  },
+  {
+    "CompetitorID": "Microsoft"
+  },
+  {
+    "CompetitorID": "Sony"
+  },
+  {
+    "CompetitorID": "LG"
+  },
+  {
+    "CompetitorID": "Xiaomi"
+  },
+  {
+    "CompetitorID": "OnePlus"
+  },
+  {
+    "CompetitorID": "Bose"
+  },
+  {
+    "CompetitorID": "JBL"
+  },
+  {
+    "CompetitorID": "Anker"
+  },
+  {
+    "CompetitorID": "Logitech"
+  },
+  {
+    "CompetitorID": "Razer"
+  },
+  {
+    "CompetitorID": "Corsair"
+  },
+  {
+    "CompetitorID": "BenQ"
+  },
+  {
+    "CompetitorID": "ViewSonic"
+  },
+  {
+    "CompetitorID": "Philips"
+  },
+  {
+    "CompetitorID": "Belkin"
+  },
+  {
+    "CompetitorID": "TP-Link"
+  },
+  {
+    "CompetitorID": "Netgear"
+  },
+  {
+    "CompetitorID": "Ring"
+  },
+  {
+    "CompetitorID": "Nest"
+  },
+  {
+    "CompetitorID": "Wyze"
+  },
+  {
+    "CompetitorID": "Arlo"
+  }
+]

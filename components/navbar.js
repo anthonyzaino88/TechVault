@@ -59,7 +59,7 @@ class BottomNavbar extends HTMLElement {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--primary-blue);
+      background-color: #1e40af;
       color: whitesmoke;
       padding: 15px;
       position: fixed;
@@ -68,7 +68,7 @@ class BottomNavbar extends HTMLElement {
       right: 0;
       z-index: 999;
       opacity: 1;
-      border-top: 4px #EE3741 solid;
+      border-top: 4px #2563eb solid;
 }
 
     .nav-link {
@@ -94,7 +94,7 @@ class BottomNavbar extends HTMLElement {
       font-size: 40px;
       font-weight: 600;
       cursor: pointer;
-      color: var(--primary-blue);
+      color: #2563eb;
  }
 
 
@@ -126,7 +126,7 @@ class BottomNavbar extends HTMLElement {
   width: auto;
   padding: 0.5rem;
   background: white;
-  color: #053658;
+  color: #1e40af;
   margin-bottom: 23px;
   border-radius: 5px;
   border: 1px solid #ccc!important;
@@ -196,7 +196,7 @@ class BottomNavbar extends HTMLElement {
   font-size: .8rem;
   opacity: .7;
   text-decoration: none;
-  color: #053658;
+  color: #1e40af;
 }
 
 .sub-warp {
@@ -209,7 +209,7 @@ class BottomNavbar extends HTMLElement {
 
 .model-name a {
   font-size: 13px;
-  color: #053658;
+  color: #1e40af;
 
 }
 
@@ -220,29 +220,43 @@ class BottomNavbar extends HTMLElement {
     
   
         <nav>
-          <a class="nav-link" href="https://solerpalauusa.github.io/sp-app/">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/home.svg" alt="home" class="icon-color">
+          <a class="nav-link" href="../index.html" id="home-link">
+          <img src="../assets/images/home.svg" alt="home" class="icon-color">
             <span class="nav-icon"></span><br>Home
           </a>
           <a class="nav-link" id="search-icon">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/search-icon.svg" alt="Search" class="icon-color">
+          <img src="../assets/images/search-icon.svg" alt="Search" class="icon-color">
           <span class="nav-icon"></span><br>Search
           </a>
-          <a class="nav-link" href="https://solerpalauusa.github.io/sp-app/pages/productsgrid.html">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/fan-white.svg" alt="Products" class="icon-color">
+          <a class="nav-link" href="../pages/productsgrid.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1);">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="white" stroke-width="2" fill="none"/>
+            <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="white" stroke-width="2" fill="none"/>
+            <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="white" stroke-width="2" fill="none"/>
+            <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="white" stroke-width="2" fill="none"/>
+          </svg>
             <span class="nav-icon"></span><br>Products
           </a>
-          <a class="nav-link" href="https://solerpalauusa.github.io/sp-app/pages/library.html">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/library.svg" alt="Products" class="icon-color">
+          <a class="nav-link" href="../pages/library.html">
+          <img src="../assets/images/library.svg" alt="Library" class="icon-color">
             <span class="nav-icon"></span><br>Library
           </a>
-          <a class="nav-link" href="https://solerpalauusa.github.io/sp-app/pages/cross-ref.html">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/right-left-white.svg" alt="Products" class="icon-color">
-            <span class="nav-icon"></span><br>Cross-Ref
+          <a class="nav-link" href="../pages/analytics.html">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1);">
+            <path d="M3 3v18h18M7 16l4-4 4 4 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7" cy="16" r="1.5" fill="white"/>
+            <circle cx="11" cy="12" r="1.5" fill="white"/>
+            <circle cx="15" cy="16" r="1.5" fill="white"/>
+            <circle cx="21" cy="10" r="1.5" fill="white"/>
+          </svg>
+            <span class="nav-icon"></span><br>Analytics
           </a>
-          <a class="nav-link" href="https://solerpalauusa.github.io/sp-app/pages/important-links.html">
-          <img src="https://solerpalauusa.github.io/sp-app/assets/images/links-nav.svg" alt="Products" class="icon-color">
-            <span class="nav-icon"></span><br>Links
+          <a class="nav-link" href="https://anthony-zaino-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: brightness(0) invert(1);">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="7" r="4" stroke="white" stroke-width="2"/>
+          </svg>
+            <span class="nav-icon"></span><br>Portfolio
           </a>
         </nav>
 
@@ -339,7 +353,7 @@ class BottomNavbar extends HTMLElement {
     }
 
     // Fetch the data from your JSON file
-    fetch('https://solerpalauusa.github.io/sp-app/data/products.json') // Replace with the actual path to your JSON file
+    fetch('../data/products.json') // Replace with the actual path to your JSON file
       .then((response) => response.json())
       .then((data) => {
         // Filter the data based on the query
@@ -447,11 +461,11 @@ class BottomNavbar extends HTMLElement {
             let modelsDisplayHtml = '';
             if (result.models && result.models.length > 0) {
                 const initialModelsHtml = result.models.slice(0, 3)
-                    .map(model => `<span class="model-name"><a href="http://127.0.0.1:5500/pages/products.html?product=${encodeURIComponent(result.product)}&series=${encodeURIComponent(result.series.name)}&model=${encodeURIComponent(model.name)}" target="_blank">${model.name}</a></span>`)
+                    .map(model => `<span class="model-name"><a href="../pages/products.html?product=${encodeURIComponent(result.product)}&series=${encodeURIComponent(result.series.name)}&model=${encodeURIComponent(model.name)}" target="_blank">${model.name}</a></span>`)
                     .join(', ');
 
                 const fullModelsHtml = result.models
-                    .map(model => `<span class="model-name"><a href="http://127.0.0.1:5500/pages/products.html?product=${encodeURIComponent(result.product)}&series=${encodeURIComponent(result.series.name)}&model=${encodeURIComponent(model.name)}" target="_blank">${model.name}</a></span>`)
+                    .map(model => `<span class="model-name"><a href="../pages/products.html?product=${encodeURIComponent(result.product)}&series=${encodeURIComponent(result.series.name)}&model=${encodeURIComponent(model.name)}" target="_blank">${model.name}</a></span>`)
                     .join(', ');
 
                 // Storing initial and full HTML directly on the item to be accessible from the toggle event
@@ -491,7 +505,7 @@ class BottomNavbar extends HTMLElement {
             resultItem.addEventListener('click', (event) => {
                 if (!event.target.closest('.document-links a, .model-name a, .models-toggle')) {
                     event.preventDefault(); // This might not be necessary unless further actions are needed
-                    window.location.href = `http://127.0.0.1:5500/pages/products.html?product=${resultItem.dataset.productName}&series=${resultItem.dataset.seriesName}`;
+                    window.location.href = `../pages/products.html?product=${resultItem.dataset.productName}&series=${resultItem.dataset.seriesName}`;
                 }
             });
         });
