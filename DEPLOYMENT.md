@@ -49,7 +49,7 @@ git push -u origin main
    - **Folder:** / (root)
 5. Click **Save**
 6. Wait 1-2 minutes for deployment
-7. Access your live site at: `https://anthonyzaino88.github.io/TechVault/sp-app/`
+7. Access your live site at: `https://anthonyzaino88.github.io/TechVault/`
 
 ### **Method 2: Via GitHub CLI (if installed)**
 
@@ -61,7 +61,7 @@ gh repo edit --enable-pages
 
 ## Update Service Worker Path (Important!)
 
-After GitHub Pages is live, verify the paths work correctly. The service worker and manifest are already configured with the correct base path (`/sp-app/`).
+After GitHub Pages is live, verify the paths work correctly. The service worker and manifest are already configured with the correct base path (`/TechVault/`).
 
 ---
 
@@ -69,10 +69,10 @@ After GitHub Pages is live, verify the paths work correctly. The service worker 
 
 ### **Check these URLs:**
 
-✅ Home Page: https://anthonyzaino88.github.io/TechVault/sp-app/  
-✅ Products: https://anthonyzaino88.github.io/TechVault/sp-app/pages/products.html  
-✅ Analytics: https://anthonyzaino88.github.io/TechVault/sp-app/pages/analytics.html  
-✅ About: https://anthonyzaino88.github.io/TechVault/sp-app/pages/about.html  
+✅ Home Page: https://anthonyzaino88.github.io/TechVault/  
+✅ Products: https://anthonyzaino88.github.io/TechVault/pages/products.html  
+✅ Analytics: https://anthonyzaino88.github.io/TechVault/pages/analytics.html  
+✅ About: https://anthonyzaino88.github.io/TechVault/pages/about.html  
 
 ### **Test PWA Features:**
 
@@ -94,12 +94,12 @@ After GitHub Pages is live, verify the paths work correctly. The service worker 
 
 ### **Issue: Service Worker Not Working**
 - Check browser console for errors
-- Verify paths in `service-worker.js` match `/sp-app/`
+- Verify paths in `service-worker.js` match `/TechVault/`
 - Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
 
 ### **Issue: Manifest Not Loading**
 - Check `manifest.json` paths
-- Verify `start_url` is set to `/sp-app/`
+- Verify `start_url` is set to `/TechVault/`
 - Check browser console for manifest errors
 
 ---
@@ -134,7 +134,7 @@ If you want a custom domain like `techvault.yourdomain.com`:
 ## 🎉 You're Live!
 
 Your TechVault PWA is now accessible worldwide at:
-**https://anthonyzaino88.github.io/TechVault/sp-app/**
+**https://anthonyzaino88.github.io/TechVault/**
 
 Share it on:
 - LinkedIn

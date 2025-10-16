@@ -2,7 +2,7 @@
     "name": "TechVault - Product Catalog PWA",
     "short_name": "TechVault",
     "description": "A modern Progressive Web App showcasing e-commerce features, analytics, and document management with offline support.",
-    "start_url": "/sp-app",
+    "start_url": "/TechVault",
     "display": "standalone",
     "background_color": "#f5f5f5",
     "theme_color": "#2563eb",

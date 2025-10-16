@@ -6,7 +6,7 @@
 
 **A Progressive Web App showcasing modern e-commerce features, data visualization, and advanced web development capabilities**
 
-[Live Demo](https://anthonyzaino88.github.io/TechVault/sp-app/) | [Features](#-key-features) | [Tech Stack](#-technology-stack) | [Installation](#-installation)
+[Live Demo](https://anthonyzaino88.github.io/TechVault/) | [Features](#-key-features) | [Tech Stack](#-technology-stack) | [Installation](#-installation)
 
 ---
 
@@ -252,7 +252,7 @@ http://localhost:8000
 2. Go to **Settings** → **Pages**
 3. Select source: **main branch**
 4. Set folder: **/ (root)**
-5. Save and access via: `https://anthonyzaino88.github.io/TechVault/sp-app/`
+5. Save and access via: `https://anthonyzaino88.github.io/TechVault/`
 
 **Important:** The `start_url` and base path are configured for GitHub Pages deployment.
 
@@ -383,7 +383,7 @@ This is a portfolio project, but suggestions are welcome! Feel free to:
 **Portfolio:** [anthony-zaino-portfolio.vercel.app](https://anthony-zaino-portfolio.vercel.app/)  
 **GitHub:** [@anthonyzaino88](https://github.com/anthonyzaino88)  
 **LinkedIn:** [Connect on LinkedIn](https://linkedin.com/in/anthony-zaino)  
-**Project Demo:** [Live TechVault Demo](https://anthonyzaino88.github.io/TechVault/sp-app/)
+**Project Demo:** [Live TechVault Demo](https://anthonyzaino88.github.io/TechVault/)
 
 ---
 

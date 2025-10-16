@@ -25,8 +25,8 @@
 <script>
     if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sp-app/service-worker.js', {
-                    scope: '/sp-app/'
+                navigator.serviceWorker.register('/TechVault/service-worker.js', {
+                    scope: '/TechVault/'
                 })
                 .then((registration) => {
                     console.log('Service Worker registered with scope:', registration.scope);
