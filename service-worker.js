@@ -1,5 +1,5 @@
 // Define the cache name and resources to cache
-const cacheName = 'TechVault-Catalog-PWA-V5';
+const cacheName = 'TechVault-Catalog-PWA-V6';
 const cacheResources = [
   '/TechVault/',
   '/TechVault/index.html',
@@ -63,3 +63,4 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
+
